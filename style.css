@@ -1,34 +1,30 @@
-/* ============================================================
-   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS
-   ============================================================ */
-   * {
+/* CONFIGURAÇÕES GERAIS */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 :root {
     --azul-escuro: #1a2a3a;
-    --azul-hover: #253b52;
-    --amarelo-destaque: #ffb400;
-    --whatsapp-green: #25d366;
-    --cinza-claro: #f4f7f6;
-    --cinza-borda: #e0e0e0;
-    --texto-escuro: #333;
-    --texto-suave: #666;
+    --amarelo: #ffb400;
     --branco: #ffffff;
+    --cinza-fundo: #f4f7f6;
 }
 
 body {
-    background-color: var(--cinza-claro);
-    color: var(--texto-escuro);
-    line-height: 1.6;
+    background-color: var(--cinza-fundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Faz o rodapé ficar sempre embaixo */
 }
 
-/* ============================================================
-   2. NAVEGAÇÃO (HEADER & MENU DROPDOWN)
-   ============================================================ */
+main {
+    flex: 1; /* Garante que o conteúdo empurre o rodapé para o fim da tela */
+}
+
+/* NAVBAR PADRONIZADA */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -38,247 +34,95 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .logo {
-    font-size: 1.6rem;
-    font-weight: 800;
     color: var(--branco);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    align-items: center;
 }
 
 .nav-links li {
-    position: relative;
     padding: 0 15px;
+    position: relative;
 }
 
 .nav-links a {
     color: var(--branco);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 500;
     transition: 0.3s;
-    text-transform: uppercase;
 }
 
 .nav-links a:hover {
-    color: var(--amarelo-destaque);
+    color: var(--amarelo);
 }
 
-/* --- Dropdown Engenharia --- */
+/* DROPDOWN */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--branco);
-    min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
-    z-index: 1;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     top: 100%;
     left: 0;
     list-style: none;
-    border-radius: 0 0 5px 5px;
     padding: 10px 0;
-    border-top: 3px solid var(--amarelo-destaque);
 }
 
 .dropdown-content a {
-    color: var(--azul-escuro) !important;
-    padding: 12px 20px;
+    color: #333 !important;
+    padding: 10px 20px;
     display: block;
-    font-size: 0.85rem;
-    text-align: left;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-    padding-left: 25px;
+.dropdown-content li:hover {
+    background-color: #eee;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* ============================================================
-   3. SEÇÃO HERO (BANNER PRINCIPAL)
-   ============================================================ */
-.hero {
-    background: linear-gradient(rgba(26, 42, 58, 0.8), rgba(26, 42, 58, 0.8)), 
-                url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070') center/cover;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--branco);
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-/* ============================================================
-   4. LAYOUT DE SERVIÇOS (CARDS)
-   ============================================================ */
-.container {
-    padding: 60px 8%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.servicos-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.servicos-header h1 {
-    font-size: 2.5rem;
-    color: var(--azul-escuro);
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.servicos-header h1::after {
-    content: '';
-    width: 60px;
-    height: 4px;
-    background: var(--amarelo-destaque);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
+/* CARDS DE SERVIÇOS */
+.container { padding: 50px 8%; text-align: center; }
 .grid-servicos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
 }
-
 .card {
     background: var(--branco);
-    padding: 40px 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    border-top: 5px solid transparent;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 4px solid var(--amarelo);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-top: 5px solid var(--amarelo-destaque);
-}
-
-.card .icon {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    display: block;
-}
-
-/* ============================================================
-   5. PÁGINA SOBRE NÓS (SÓCIOS)
-   ============================================================ */
-.sobre-conteudo {
-    max-width: 900px;
-    margin: 0 auto;
-    background: var(--branco);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.socios-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.socio-card {
-    background: #f9f9f9;
-    padding: 25px;
-    border-left: 5px solid var(--amarelo-destaque);
-    border-radius: 5px;
-}
-
-.missao {
-    border-top: 1px solid var(--cinza-borda);
-    padding-top: 25px;
-    font-style: italic;
-    color: var(--azul-escuro);
-    font-weight: 600;
-    text-align: center;
-}
-
-/* ============================================================
-   6. PÁGINA DE CONTATO E WHATSAPP
-   ============================================================ */
-.contato-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    background: var(--branco);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.icon-small {
-    font-size: 1.5rem;
-    margin-right: 15px;
-}
-
-.btn-whatsapp {
-    display: inline-block;
-    background-color: var(--whatsapp-green);
-    color: white !important;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-}
-
-.btn-whatsapp:hover {
-    background-color: #1ebe57;
-    transform: scale(1.05);
-}
-
-/* ============================================================
-   7. RODAPÉ E RESPONSIVIDADE
-   ============================================================ */
+/* RODAPÉ PADRONIZADO */
 footer {
     background-color: var(--azul-escuro);
     color: var(--branco);
     text-align: center;
-    padding: 30px 0;
-    margin-top: 50px;
+    padding: 30px 20px;
+    margin-top: auto;
 }
 
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-    .navbar { flex-direction: column; padding: 1.5rem 1rem; }
-    .nav-links { margin-top: 20px; flex-direction: column; width: 100%; }
-    .nav-links li { width: 100%; text-align: center; padding: 10px 0; }
-    .dropdown-content { position: static; box-shadow: none; background-color: var(--azul-hover); width: 100%; }
-    .dropdown-content a { color: var(--branco) !important; text-align: center; }
-    .socios-grid, .contato-grid { grid-template-columns: 1fr; }
+    .nav-links { flex-direction: column; display: none; } /* Menu hamburguer pode ser adicionado depois */
+    .navbar { padding: 1rem 5%; }
 }
