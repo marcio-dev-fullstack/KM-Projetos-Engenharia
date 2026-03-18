@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KM PROJETOS & ENGENHARIA | Sobre</title>
+    <title>KM PROJETOS & ENGENHARIA | Sobre Nós</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .equipe-section {
+            margin: 60px auto;
+            max-width: 900px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .equipe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .membro-card {
+            flex: 1 1 400px; /* Largura base de 400px, flexível */
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #ffb400;
+        }
+
+        .membro-foto {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Foto redonda */
+            object-fit: cover; /* Garante que a foto preencha sem distorcer */
+            border: 3px solid #ddd;
+        }
+
+        .membro-info {
+            flex: 1;
+        }
+
+        .membro-info h4 {
+            color: #1a2a3a;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .membro-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Responsividade para Mobile */
+        @media (max-width: 600px) {
+            .membro-card {
+                flex-direction: column; /* Foto em cima, texto embaixo */
+                align-items: center;
+                text-align: center;
+            }
+            .equipe-section {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -40,21 +109,31 @@
                 Referência no Sul do Pará, a KM Projetos & Engenharia une tradição técnica e inovação para entregar soluções que impulsionam o desenvolvimento regional.
             </p>
 
-            <div style="margin: 40px auto; max-width: 600px; text-align: center; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <h3 style="color: #1a2a3a; margin-bottom: 20px; border-bottom: 2px solid #ffb400; display: inline-block; padding-bottom: 5px;">EQUIPE TÉCNICA</h3>
+            <div class="equipe-section">
+                <h3 style="color: #1a2a3a; border-bottom: 2px solid #ffb400; display: inline-block; padding-bottom: 5px; text-transform: uppercase;">EQUIPE TÉCNICA</h3>
                 
-                <div style="margin-bottom: 25px;">
-                    <p><strong>KÉSIA DE OLIVEIRA QUADROS</strong></p>
-                    <p style="font-size: 0.9rem; color: #666;">GESTORA AMBIENTAL | CREA: 1523268603PA</p>
-                </div>
+                <div class="equipe-container">
+                    
+                    <div class="membro-card">
+                        <img src="foto-kesia.jpeg" alt="Foto de Késia Quadros" class="membro-foto">
+                        <div class="membro-info">
+                            <h4>KÉSIA DE OLIVEIRA QUADROS</h4>
+                            <p>GESTORA AMBIENTAL</p>
+                            <p>CREA: 1523268603PA</p>
+                        </div>
+                    </div>
 
-                <div>
-                    <p><strong>MÁRCIO RODRIGUES DE OLIVEIRA</strong></p>
-                    <p style="font-size: 0.9rem; color: #666; line-height: 1.5;">
-                        ENGENHEIRO CIVIL | CREA: 1522223070PA<br>
-                        ENGENHEIRO DE SEGURANÇA DO TRABALHO<br>
-                        ENGENHEIRO DE SOFTWARE
-                    </p>
+                    <div class="membro-card">
+                        <img src="foto-marcio.jpeg" alt="Foto de Márcio Oliveira" class="membro-foto">
+                        <div class="membro-info">
+                            <h4>MÁRCIO RODRIGUES DE OLIVEIRA</h4>
+                            <p>ENGENHEIRO CIVIL</p>
+                            <p>CREA: 1522223070PA</p>
+                            <p>ENG. DE SEGURANÇA DO TRABALHO</p>
+                            <p>ENG. DE SOFTWARE</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
