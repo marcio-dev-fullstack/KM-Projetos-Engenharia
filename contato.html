@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KM PROJETOS & ENGENHARIA | Contato</title>
+    <title>Contato | KM PROJETOS & ENGENHARIA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,15 +11,19 @@
     <header>
         <nav class="navbar">
             <div class="logo">KM PROJETOS & ENGENHARIA</div>
+            
+            <input type="checkbox" id="menu-check" style="display: none;">
+            <label for="menu-check" class="menu-btn"><i class="fas fa-bars"></i></label>
+            
             <ul class="nav-links">
                 <li><a href="index.html">INÍCIO</a></li>
-                <li class="dropdown">
+                <li class="dropdown" onclick="void(0)">
                     <a href="#">ENGENHARIA ▼</a>
                     <ul class="dropdown-content">
                         <li><a href="engenharia/civil.html">CIVIL</a></li>
                         <li><a href="engenharia/ambiental.html">AMBIENTAL</a></li>
-                        <li><a href="engenharia/sst.html">SST</a></li>
-                        <li><a href="engenharia/computacao.html">COMPUTAÇÃO</a></li>
+                        <li><a href="engenharia/saude.html">Saúde e segurança</a></li>
+                        <li><a href="engenharia/ti.html">Tecnologia</a></li>
                     </ul>
                 </li>
                 <li><a href="sobre.html">SOBRE NÓS</a></li>
@@ -28,29 +32,50 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Fale Conosco</h1>
-            <p>Excelência técnica em Conceição do Araguaia - PA. Projetos civis, ambientais, segurança do trabalho e Tecnologia.</p>
-        </section>
-        <section class="container">
-            <div class="grid-servicos">
-                <div class="card"><span class="icon">📍</span><h3>Local</h3><p>Conceição do Araguaia - PA</p></div>
-                <div class="card" style="border-bottom: 5px solid #25d366;"><span class="icon">💬</span><h3>WhatsApp</h3><p>(94) 99250-0073</p></div>
-                <div class="card"><span class="icon">📧</span><h3>E-mail</h3><p>kmprojetos.eng@gmail.com</p></div>
+    <section class="hero">
+        <h1>Contato</h1>
+        <p>Estamos prontos para atender sua demanda com excelência técnica.</p>
+    </section>
+
+    <main class="container">
+        <div class="contato-grid">
+            
+            <div class="contato-card">
+                <i class="fab fa-whatsapp contato-icon"></i>
+                <h3>WhatsApp</h3>
+                <p>(94) 99250-0073</p>
+                <a href="https://wa.me/5594992500073" target="_blank" class="btn-contato">Enviar Mensagem</a>
             </div>
-        </section>
+
+            <div class="contato-card">
+                <i class="fas fa-envelope contato-icon"></i>
+                <h3>E-mail</h3>
+                <p>kmprojetos.eng@gmail.com</p>
+                <a href="mailto:kmprojetos.eng@gmail.com" class="btn-contato">Enviar E-mail</a>
+            </div>
+
+            <div class="contato-card">
+                <i class="fas fa-map-marker-alt contato-icon"></i>
+                <h3>Localização</h3>
+                <p>Conceição do Araguaia - PA</p>
+                <p style="font-size: 0.8rem; color: #777; margin-top: 10px;">Atendimento em toda a região</p>
+            </div>
+
+        </div>
     </main>
 
     <footer>
         <div class="footer-content">
             <p>&copy; 2026 KM Projetos & Engenharia - Todos os direitos reservados.</p>
             <p>Contato: (94) 99250-0073 | <strong>kmprojetos.eng@gmail.com</strong></p>
-            <hr>
-            <p>Desenvolvido por: <a href="https://razgo.com.br" target="_blank">RAZGO</a></p>
+            <hr style="width: 60px; margin: 20px auto; border: 1px solid #ffb400; opacity: 0.5;">
+            <p>Desenvolvido por: <a href="https://razgo.com.br" target="_blank" style="color: #ffb400; text-decoration: none; font-weight: bold;">RAZGO</a></p>
         </div>
     </footer>
 
-    <a href="https://wa.me/5594992500073" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/5594992500073" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 </body>
 </html>

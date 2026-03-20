@@ -2,80 +2,26 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>KM PROJETOS & ENGENHARIA | Sobre Nós</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | KM PROJETOS & ENGENHARIA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Ajustes para os Cards da Equipe Técnica */
-        .equipe-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            padding: 40px 15px;
-            background-color: #f4f7f9; /* Fundo leve para destacar os cards brancos */
-        }
-        .membro-card {
-            background: white;
-            border-radius: 15px;
-            width: 290px;
-            overflow: hidden;
-            text-align: center;
-            border-bottom: 5px solid #001f3f;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            color: #333;
-        }
-        .membro-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-        }
-        .membro-foto {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-        .membro-info {
-            padding: 20px;
-        }
-        .membro-info h4 {
-            margin: 0 0 10px 0;
-            color: #001f3f;
-            font-size: 1.1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-        .membro-info p {
-            margin: 2px 0;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #666;
-            line-height: 1.4;
-        }
-        .crea-text {
-            color: #007bff !important;
-            font-weight: 700;
-            margin-top: 8px;
-            display: block;
-            font-size: 0.8rem;
-        }
-        footer { margin-top: 0; }
-    </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">KM PROJETOS & ENGENHARIA</div>
+            <input type="checkbox" id="menu-check" style="display: none;">
+            <label for="menu-check" class="menu-btn"><i class="fas fa-bars"></i></label>
             <ul class="nav-links">
                 <li><a href="index.html">INÍCIO</a></li>
-                <li class="dropdown">
+                <li class="dropdown" onclick="void(0)">
                     <a href="#">ENGENHARIA ▼</a>
                     <ul class="dropdown-content">
-                        <li><a href="engenharia/civil.html">CIVIL</a></li>
-                        <li><a href="engenharia/ambiental.html">AMBIENTAL</a></li>
-                        <li><a href="engenharia/sst.html">SST</a></li>
-                        <li><a href="engenharia/computacao.html">COMPUTAÇÃO</a></li>
+                        <li><a href="civil.html">CIVIL</a></li>
+                        <li><a href="ambiental.html">AMBIENTAL</a></li>
+                        <li><a href="saude.html">Saúde e segurança</a></li>
+                        <li><a href="ti.html">Tecnologia</a></li>
                     </ul>
                 </li>
                 <li><a href="sobre.html">SOBRE NÓS</a></li>
@@ -84,44 +30,66 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Sobre Nós</h1>
-            <p>Excelência técnica em Conceição do Araguaia - PA. Projetos civis, ambientais, segurança do trabalho e Tecnologia.</p>
-        </section>
+    <section class="hero">
+        <h1>Sobre Nós</h1>
+        <p>Conheça nossa equipe técnica multidisciplinar.</p>
+    </section>
 
-        <h2 style="text-align: center; margin-top: 50px; font-size: 1.4rem; letter-spacing: 3px; font-weight: 300; color: #001f3f;">NOSSA EQUIPE TÉCNICA</h2>
-
-        <div class="equipe-container">
+    <main class="container">
+        <div class="equipe-grid">
+            
             <div class="membro-card">
-                <img src="foto-kesia.jpeg" alt="Késia Quadros" class="membro-foto">
+                <div class="foto-container">
+                    <img src="kesia.jpeg" alt="Késia" class="foto-membro">
+                </div>
                 <div class="membro-info">
-                    <h4>KÉSIA DE OLIVEIRA QUADROS</h4>
-                    <p>GESTORA AMBIENTAL</p>
-                    <span class="crea-text">CREA: 1523268603PA</span>
+                    <h2>Késia Quadros</h2>
+                    <p><i class="fas fa-check-circle check-icon"></i> Gestora Ambiental</p>
+                    <p><i class="fas fa-check-circle check-icon"></i> Geógrafa</p>
+                    <div class="crea-box">CREA: 1523268603PA</div>
                 </div>
             </div>
-
+    
             <div class="membro-card">
-                <img src="foto-marcio.jpg" alt="Márcio Oliveira" class="membro-foto">
+                <div class="foto-container">
+                    <img src="marcio.jpg" alt="Márcio Oliveira" class="foto-membro">
+                </div>
                 <div class="membro-info">
-                    <h4>MÁRCIO RODRIGUES DE OLIVEIRA</h4>
-                    <p>ENGENHEIRO CIVIL</p>
-                    <p>ENGENHEIRO DE SOFTWARE</p>
-                    <p>ENG. DE SEGURANÇA DO TRABALHO</p>
-                    <span class="crea-text">CREA: 1522223070PA</span>
+                    <h2>Márcio Oliveira</h2>
+                    <p><i class="fas fa-check-circle check-icon"></i> Engenheiro Civil</p>
+                    <p><i class="fas fa-check-circle check-icon"></i> Engenheiro de Software</p>
+                    <p><i class="fas fa-check-circle check-icon"></i> Eng. de Segurança do Trabalho</p>
+                    <div class="crea-box">CREA: 1522223070PA</div>
                 </div>
             </div>
-
+    
             <div class="membro-card">
-                <img src="foto-ailton.jpg" alt="Ailton Bartolomeu" class="membro-foto">
+                <div class="foto-container">
+                    <img src="ailton.jpg" alt="Ailton" class="foto-membro">
+                </div>
                 <div class="membro-info">
-                    <h4>AILTON OLIVEIRA BARTOLOMEU</h4>
-                    <p>ENGENHEIRO SANITARISTA</p>
-                    <p>ENG. DE SEGURANÇA DO TRABALHO</p>
-                    <span class="crea-text">CREA: 15043692246PA</span>
+                    <h2>Ailton Bartolomeu</h2>
+                    <p><i class="fas fa-check-circle check-icon"></i> Engenheiro Sanitarista</p>
+                    <p><i class="fas fa-check-circle check-icon"></i> Eng. de Segurança do Trabalho</p>
+                    <div class="crea-box">CREA: 1504369246PA</div>
                 </div>
             </div>
+    
+            <div class="membro-card">
+                <div class="foto-container">
+                    <img src="alex.jpeg" alt="Alexsandro Weeck" class="foto-membro">
+                </div>
+                <div class="membro-info">
+                    <h2>Alexsandro Weeck</h2>
+                    <p><i class="fas fa-check-circle check-icon"></i> Arquiteto</p>
+                    <p><i class="fas fa-check-circle check-icon"></i> Engenheiro Civil</p>
+                    <p><i class="fas fa-check-circle check-icon"></i> Engenheiro de Produção</p>
+                    <p><i class="fas fa-check-circle check-icon"></i> Eng. de Segurança do Trabalho</p>
+                    <div class="crea-box">CAU: A3222187</div>
+                    <div class="crea-box">CREA: 271200RS</div>
+                </div>
+            </div>
+    
         </div>
     </main>
 
@@ -129,8 +97,8 @@
         <div class="footer-content">
             <p>&copy; 2026 KM Projetos & Engenharia - Todos os direitos reservados.</p>
             <p>Contato: (94) 99250-0073 | <strong>kmprojetos.eng@gmail.com</strong></p>
-            <hr>
-            <p>Desenvolvido por: <a href="https://razgo.com.br" target="_blank">RAZGO</a></p>
+            <hr style="width: 50px; margin: 20px auto; border: 1px solid #ffb400;">
+            <p>Desenvolvido por: <a href="https://razgo.com.br" target="_blank" style="color: #ffb400; text-decoration: none;">RAZGO</a></p>
         </div>
     </footer>
 
