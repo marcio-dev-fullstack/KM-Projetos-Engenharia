@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipe Técnica - MAZZ</title>
     <style>
-        /* CSS ORIGINAL RESTAURADO */
+        /* CSS ORIGINAL COM ANIMAÇÕES ADICIONADAS */
         .equipe-container {
             display: flex;
             flex-wrap: wrap;
@@ -20,10 +20,19 @@
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             width: 300px;
-            overflow: hidden;
+            overflow: hidden; /* Importante para o zoom da foto */
             text-align: center;
-            transition: transform 0.3s;
             border-bottom: 4px solid #001f3f;
+            
+            /* --- NOVA ANIMAÇÃO DE LEVANTAR --- */
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        /* --- EFEITO AO PASSAR O MOUSE (HOVER) --- */
+        .membro-card:hover {
+            transform: translateY(-15px); /* Levanta o card */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* Sombra mais forte */
         }
 
         .membro-foto {
@@ -31,11 +40,21 @@
             height: 320px;
             object-fit: cover;
             background-color: #ddd;
+            
+            /* --- NOVA ANIMAÇÃO DE ZOOM DA FOTO --- */
+            transition: transform 0.5s ease;
+        }
+
+        /* --- ZOOM DA FOTO NO HOVER --- */
+        .membro-card:hover .membro-foto {
+            transform: scale(1.08); /* Aumenta a foto 8% */
         }
 
         .membro-info {
             padding: 20px;
             color: #333;
+            position: relative; /* Garante que o texto fique acima do fundo se necessário */
+            z-index: 10;
         }
 
         .membro-info h4 {
@@ -84,7 +103,6 @@
             <div class="membro-info">
                 <h4>AILTON OLIVEIRA BARTOLOMEU</h4>
                 <p>ENGENHEIRO SANITARISTA</p>
-                <p>ENGENHEIRO DE SEGURANÇA DO TRABALHO</p>
                 <p>CREA: 15043692246PA</p> 
             </div>
         </div>
