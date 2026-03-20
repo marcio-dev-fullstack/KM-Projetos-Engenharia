@@ -115,17 +115,16 @@ header {
 
 .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
 
-/* --- 4. GRID DE SERVIÇOS (INDEX) --- */
+/* --- 4. GRID DE SERVIÇOS (INDEX) - 2 POR LINHA NO PC --- */
 .container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
-    text-align: center;
 }
 
 .grid-servicos {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 por linha no PC */
+    grid-template-columns: 1fr 1fr; /* Força 2 por linha no PC */
     gap: 25px;
     margin-top: 30px;
     max-width: 900px;
@@ -149,14 +148,13 @@ header {
     display: block;
 }
 
-/* --- 5. PÁGINA SOBRE (EQUIPE CIRCULAR) --- */
+/* --- 5. PÁGINA SOBRE (EQUIPE CIRCULAR - 2 POR LINHA NO PC) --- */
 .equipe-grid {
     display: grid;
-    /* AJUSTE TÉCNICO AQUI: Força exatamente 2 colunas no PC */
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr; /* Força 2 por linha no PC */
     gap: 30px;
     margin-top: 40px;
-    max-width: 1000px; /* Garante que não fique muito largo em telas gigantes */
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -204,13 +202,53 @@ header {
     border-radius: 4px;
 }
 
-/* --- 6. RODAPÉ E WHATSAPP --- */
+/* --- 6. PÁGINA DE CONTACTO (3 NA MESMA LINHA NO PC) --- */
+.contato-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+
+.contato-card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-bottom: 5px solid #ffb400;
+    flex: 1;
+    min-width: 300px;
+    max-width: 360px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato-icon { font-size: 3rem; color: #ffb400; margin-bottom: 20px; }
+.btn-contato {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #1a1a1a;
+    color: #ffb400;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.btn-contato:hover { background-color: #ffb400; color: #1a1a1a; }
+
+/* --- 7. RODAPÉ E WHATSAPP --- */
 footer {
     background-color: #1a1a1a;
     color: white;
     padding: 50px 20px;
     text-align: center;
     margin-top: 60px;
+    width: 100%;
 }
 
 .whatsapp-float {
@@ -231,7 +269,7 @@ footer {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* --- 7. RESPONSIVIDADE (MOBILE ESTILO APP) --- */
+/* --- 8. RESPONSIVIDADE (MOBILE ESTILO APP) --- */
 @media (max-width: 768px) {
     .menu-btn { display: block; }
 
@@ -254,15 +292,15 @@ footer {
     .nav-links li { margin: 15px 0; width: 100%; text-align: center; }
     .nav-links a { font-size: 1.2rem; display: block; width: 100%; }
 
-    .grid-servicos, .equipe-grid {
-        grid-template-columns: 1fr; /* 1 por linha no celular */
+    /* Força 1 coluna no telemóvel para tudo */
+    .grid-servicos, .equipe-grid, .contato-grid {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
         padding: 0 15px;
     }
 
-    .foto-container {
-        width: 180px;
-        height: 180px;
-    }
-
+    .contato-card { width: 100%; }
+    .foto-container { width: 180px; height: 180px; }
     .hero h1 { font-size: 1.8rem; }
 }
