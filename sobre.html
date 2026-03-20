@@ -3,106 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Equipe Técnica - KM Projetos & Engenharia</title>
+    <title>Sobre Nós - KM Projetos & Engenharia</title>
     <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#001f3f">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        /* CONFIGURAÇÕES GERAIS */
+        /* PADRONIZAÇÃO COM A INDEX */
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
         body { 
             background-color: #001f3f; 
             color: white; 
             font-family: sans-serif; 
+            text-align: center; 
             margin: 0; 
-            padding-top: 80px;
+            padding: 80px 0 40px 0; /* Padding superior para não cobrir pela navbar */
         }
 
-        /* NAVBAR KM PROJETOS */
+        /* NAVBAR IDENTIDADE KM */
         .navbar { 
             background: rgba(0, 31, 63, 0.95) !important; 
             backdrop-filter: blur(10px); 
-            border-bottom: 2px solid #ffc107; 
+            border-bottom: 1px solid rgba(255,255,255,0.2); 
         }
         .navbar-brand { font-weight: 800; letter-spacing: 1px; color: white !important; }
         .nav-link { color: rgba(255,255,255,0.8) !important; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
         .nav-link:hover { color: #ffc107 !important; }
 
-        /* CONTAINER DA EQUIPE */
-        .equipe-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            padding: 40px 20px;
+        .logo-sobre { max-width: 120px; margin-bottom: 10px; }
+
+        /* LINHA DE FORA A FORA (IGUAL INDEX) */
+        hr.full-line { border: 0; border-top: 1px solid rgba(255,255,255,0.3); width: 100%; margin: 20px 0 35px 0; }
+
+        h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 20px; padding: 0 20px; color: #ffc107; }
+        
+        .content-section { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 0 25px; 
+            text-align: justify; 
+            line-height: 1.6; 
+            font-size: 0.95rem;
+            opacity: 0.9;
         }
 
-        /* CARD COM ANIMAÇÃO */
+        /* ESTILO DOS CARDS DA EQUIPE COM ANIMAÇÃO */
+        .equipe-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px 10px; }
+        
         .membro-card {
             background: white;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            width: 300px;
+            width: 280px;
             overflow: hidden;
             text-align: center;
             border-bottom: 5px solid #ffc107;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transition: transform 0.4s ease;
             cursor: pointer;
         }
-
-        .membro-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-        }
-
-        .membro-foto {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .membro-card:hover .membro-foto {
-            transform: scale(1.1);
-        }
-
-        .membro-info {
-            padding: 20px;
-            color: #333;
-        }
-
-        .membro-info h4 {
-            margin: 0 0 10px 0;
-            color: #001f3f;
-            font-size: 1.1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
-        .membro-info p {
-            margin: 3px 0;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #555;
-            line-height: 1.4;
-        }
-
-        .crea-text {
-            display: block;
-            margin-top: 10px !important;
-            color: #007bff !important;
-            font-size: 0.8rem !important;
-            font-weight: 700;
-        }
-
-        h2.section-title {
-            text-align: center;
-            margin-top: 20px;
-            font-weight: 300;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+        .membro-card:hover { transform: translateY(-10px); }
+        .membro-foto { width: 100%; height: 280px; object-fit: cover; transition: 0.5s; }
+        .membro-card:hover .membro-foto { transform: scale(1.05); }
+        
+        .membro-info { padding: 15px; color: #333; }
+        .membro-info h4 { margin: 0; font-size: 1rem; color: #001f3f; font-weight: 800; }
+        .membro-info p { margin: 2px 0; font-size: 0.8rem; font-weight: 600; color: #666; }
+        .crea-text { color: #007bff !important; font-weight: 700; margin-top: 5px !important; display: block; }
     </style>
 </head>
 <body>
@@ -114,50 +83,58 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sobre.html">Sobre Nós</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <h2 class="section-title">Corpo Técnico Especializado</h2>
+    <img src="img/logo.png" alt="KM Projetos" class="logo-sobre">
+    
+    <hr class="full-line">
+
+    <h1>Nossa História e Compromisso</h1>
+
+    <div class="content-section">
+        <p>A <b>KM Projetos & Engenharia</b> nasceu da união de profissionais experientes com o objetivo de entregar soluções técnicas precisas em Engenharia Civil, Ambiental e Segurança do Trabalho.</p>
+        <p>Com sede em Goiânia e atuação em diversos estados, focamos na excelência de laudos, projetos estruturais e licenciamentos, sempre priorizando o rigor técnico e a satisfação de nossos clientes.</p>
+    </div>
+
+    <h2 style="margin-top: 40px; font-size: 1.4rem; letter-spacing: 2px;">CORPO TÉCNICO</h2>
 
     <div class="equipe-container">
-        
         <div class="membro-card">
             <img src="foto-kesia.jpeg" alt="Késia Quadros" class="membro-foto">
             <div class="membro-info">
-                <h4>KÉSIA DE OLIVEIRA QUADROS</h4>
+                <h4>KÉSIA QUADROS</h4>
                 <p>GESTORA AMBIENTAL</p>
-                <p class="crea-text">CREA: 1523268603PA</p>
+                <span class="crea-text">CREA: 1523268603PA</span>
             </div>
         </div>
 
         <div class="membro-card">
             <img src="foto-marcio.jpg" alt="Márcio Oliveira" class="membro-foto">
             <div class="membro-info">
-                <h4>MÁRCIO RODRIGUES DE OLIVEIRA</h4>
+                <h4>MÁRCIO OLIVEIRA</h4>
                 <p>ENGENHEIRO CIVIL</p>
                 <p>ENGENHEIRO DE SOFTWARE</p>
-                <p>ENG. DE SEGURANÇA DO TRABALHO</p>                            
-                <p class="crea-text">CREA: 1522223070PA</p>                           
+                <p>ENG. DE SEGURANÇA DO TRABALHO</p>
+                <span class="crea-text">CREA: 1522223070PA</span>
             </div>
         </div>
 
         <div class="membro-card">
             <img src="foto-ailton.jpg" alt="Ailton Bartolomeu" class="membro-foto">
             <div class="membro-info">
-                <h4>AILTON OLIVEIRA BARTOLOMEU</h4>
+                <h4>AILTON BARTOLOMEU</h4>
                 <p>ENGENHEIRO SANITARISTA</p>
-                <p>ENGENHEIRO DE SEGURANÇA DO TRABALHO</p>
-                <p class="crea-text">CREA: 15043692246PA</p> 
+                <p>ENG. DE SEGURANÇA DO TRABALHO</p>
+                <span class="crea-text">CREA: 15043692246PA</span>
             </div>
         </div>
-
     </div>
 
     <script src="footer.js"></script>
