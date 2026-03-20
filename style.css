@@ -94,17 +94,16 @@ header {
 }
 .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
 
-/* --- 4. GRIDS (SERVIÇOS E EQUIPE - 2 COLUNAS NO PC) --- */
+/* --- 4. GRIDS DE 2 COLUNAS (SERVIÇOS E EQUIPE - PC) --- */
 .container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
-    text-align: center;
 }
 
 .grid-servicos, .equipe-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 por linha no PC */
+    grid-template-columns: 1fr 1fr; /* Força 2 por linha no PC */
     gap: 30px;
     margin-top: 40px;
     max-width: 1000px;
@@ -112,7 +111,7 @@ header {
     margin-right: auto;
 }
 
-/* Cards de Membros (SOBRE) */
+/* Membros da Equipe (SOBRE) */
 .membro-card {
     background: white;
     border-radius: 10px;
@@ -121,7 +120,7 @@ header {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza tudo horizontalmente */
+    align-items: center; /* Centraliza tudo abaixo da foto */
     text-align: center;
 }
 
@@ -132,14 +131,12 @@ header {
     overflow: hidden;
     border: 5px solid #ffb400;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .foto-membro {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
 }
 
 .membro-info h2 { font-size: 1.3rem; margin-bottom: 8px; color: #1a1a1a; }
@@ -155,24 +152,24 @@ header {
     border-radius: 4px;
 }
 
-/* --- 5. GRID DE CONTATOS (3 COLUNAS NO PC) --- */
+/* --- 5. GRID DE CONTATO (3 COLUNAS - PC) --- */
 .contato-grid {
-    display: flex;
+    display: flex; /* Ativa alinhamento horizontal */
+    flex-direction: row;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     margin: 50px auto;
     max-width: 1100px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Impede quebrar linha no PC */
 }
 
 .contato-card {
     background: white;
-    padding: 30px 20px;
+    padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-bottom: 5px solid #ffb400;
-    flex: 1;
-    min-width: 300px;
+    flex: 1; /* Divide o espaço igualmente em 3 */
     max-width: 350px;
     text-align: center;
     display: flex;
@@ -193,6 +190,7 @@ header {
     border-radius: 5px;
     transition: 0.3s;
 }
+
 .btn-contato:hover { background-color: #ffb400; color: #1a1a1a; }
 
 /* --- 6. RODAPÉ E WHATSAPP --- */
@@ -240,12 +238,14 @@ footer {
         z-index: 999;
     }
     #menu-check:checked ~ .nav-links { left: 0; }
-    .nav-links li { margin: 15px 0; width: 100%; text-align: center; }
     
+    /* No celular, tudo vira 1 coluna vertical */
     .grid-servicos, .equipe-grid, .contato-grid {
         grid-template-columns: 1fr;
         flex-direction: column;
         align-items: center;
+        flex-wrap: wrap;
     }
-    .contato-card { width: 100%; }
+    .contato-card { width: 100%; max-width: 100%; }
+    .foto-container { width: 180px; height: 180px; }
 }
