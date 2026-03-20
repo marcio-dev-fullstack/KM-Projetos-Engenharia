@@ -2,93 +2,55 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sobre Nós - KM PROJETOS & ENGENHARIA</title>
-    <link rel="manifest" href="manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#001f3f">
-    <style>
-        /* PADRONIZAÇÃO TOTAL COM A INDEX */
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { background-color: #001f3f; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 40px 0; }
-        
-        .logo { max-width: 140px; margin-bottom: 20px; }
-        
-        /* Linha de fora a fora idêntica à index */
-        hr { border: 0; border-top: 1px solid rgba(255,255,255,0.3); width: 100%; margin: 20px 0 35px 0; }
-        
-        h1 { font-size: 1.3rem; font-weight: 300; margin-bottom: 35px; line-height: 1.4; padding: 0 20px; text-transform: uppercase; }
-
-        /* Estilo dos Botões (O "Menu" da Index) */
-        .btn-list { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 320px; margin: 0 auto 40px auto; padding: 0 20px; }
-        .btn { background: white; color: #001f3f; padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: block; }
-        .btn:active { transform: scale(0.97); background: #eee; }
-
-        /* Seção de Texto */
-        .content-section { max-width: 500px; margin: 0 auto; padding: 0 20px; text-align: justify; line-height: 1.6; font-size: 1rem; opacity: 0.9; }
-        .content-section b { color: #ffc107; }
-
-        /* Cards da Equipe (Mantendo a animação que você gostou) */
-        .equipe-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
-        .membro-card { background: white; border-radius: 15px; width: 280px; overflow: hidden; text-align: center; border-bottom: 5px solid #ffc107; transition: 0.4s; margin-bottom: 20px; }
-        .membro-card:hover { transform: translateY(-10px); }
-        .membro-foto { width: 100%; height: 280px; object-fit: cover; }
-        .membro-info { padding: 15px; color: #333; }
-        .membro-info h4 { margin: 0; font-size: 1rem; color: #001f3f; font-weight: 800; }
-        .membro-info p { margin: 2px 0; font-size: 0.8rem; font-weight: 600; color: #666; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM PROJETOS & ENGENHARIA | Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">KM PROJETOS & ENGENHARIA</div>
+            <ul class="nav-links">
+                <li><a href="index.html">INÍCIO</a></li>
+                <li class="dropdown">
+                    <a href="#">ENGENHARIA ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="engenharia/civil.html">CIVIL</a></li>
+                        <li><a href="engenharia/ambiental.html">AMBIENTAL</a></li>
+                        <li><a href="engenharia/sst.html">SST</a></li>
+                        <li><a href="engenharia/computacao.html">COMPUTAÇÃO</a></li>
+                    </ul>
+                </li>
+                <li><a href="sobre.html">SOBRE NÓS</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <img src="img/logo.png" alt="KM PROJETOS" class="logo">
-    <hr>
-    <h1>Sobre a KM Projetos & Engenharia</h1>
-
-    <div class="content-section">
-        <p>A <b>KM Projetos & Engenharia</b> é especializada em soluções técnicas de alta precisão. Atuamos com Engenharia Civil, Ambiental e Segurança do Trabalho, garantindo conformidade normativa e agilidade em cada entrega.</p>
-    </div>
-
-    <div class="btn-list">
-        <a href="index.html" class="btn">INÍCIO</a>
-        <a href="cursos.html" class="btn">CURSOS</a>
-        <a href="academico.html" class="btn">ACADÊMICO</a>
-    </div>
-
-    <h2 style="font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 30px;">EQUIPE TÉCNICA</h2>
-
-    <div class="equipe-container">
-        <div class="membro-card">
-            <img src="foto-kesia.jpeg" alt="Késia" class="membro-foto">
-            <div class="membro-info">
-                <h4>KÉSIA DE OLIVEIRA QUADROS</h4>
-                <p>GESTORA AMBIENTAL</p>
-                <p style="color: #007bff; font-size: 0.75rem;">CREA: 1523268603PA</p>
+    <main>
+        <section class="hero">
+            <h1>Fale Conosco</h1>
+            <p>Excelência técnica em Conceição do Araguaia - PA. Projetos civis, ambientais, segurança do trabalho e Tecnologia.</p>
+        </section>
+        <section class="container">
+            <div class="grid-servicos">
+                <div class="card"><span class="icon">📍</span><h3>Local</h3><p>Conceição do Araguaia - PA</p></div>
+                <div class="card" style="border-bottom: 5px solid #25d366;"><span class="icon">💬</span><h3>WhatsApp</h3><p>(94) 99250-0073</p></div>
+                <div class="card"><span class="icon">📧</span><h3>E-mail</h3><p>kmprojetos.eng@gmail.com</p></div>
             </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 KM Projetos & Engenharia - Todos os direitos reservados.</p>
+            <p>Contato: (94) 99250-0073 | <strong>kmprojetos.eng@gmail.com</strong></p>
+            <hr>
+            <p>Desenvolvido por: <a href="https://razgo.com.br" target="_blank">RAZGO</a></p>
         </div>
+    </footer>
 
-        <div class="membro-card">
-            <img src="foto-marcio.jpg" alt="Márcio" class="membro-foto">
-            <div class="membro-info">
-                <h4>MÁRCIO RODRIGUES DE OLIVEIRA</h4>
-                <p>ENGENHEIRO CIVIL / SOFTWARE</p>
-                <p>ENG. DE SEGURANÇA DO TRABALHO</p>
-                <p style="color: #007bff; font-size: 0.75rem;">CREA: 1522223070PA</p>
-            </div>
-        </div>
-
-        <div class="membro-card">
-            <img src="foto-ailton.jpg" alt="Ailton" class="membro-foto">
-            <div class="membro-info">
-                <h4>AILTON OLIVEIRA BARTOLOMEU</h4>
-                <p>ENGENHEIRO SANITARISTA</p>
-                <p>ENG. DE SEGURANÇA DO TRABALHO</p>
-                <p style="color: #007bff; font-size: 0.75rem;">CREA: 15043692246PA</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="footer.js"></script>
-
+    <a href="https://wa.me/5594992500073" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
