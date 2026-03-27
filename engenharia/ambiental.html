@@ -3,63 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KM PROJETOS & ENGENHARIA | Civil</title>
+    <title>Engenharia Ambiental | KM PROJETOS & ENGENHARIA</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Ajuste específico para esta página de serviços densos */
-        .card h3 { border-bottom: 2px solid #ffb400; display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
-        .card ul { list-style: none; text-align: left; padding: 0; }
-        .card ul li { margin-bottom: 8px; font-size: 0.9rem; position: relative; padding-left: 20px; }
-        .card ul li::before { content: '✔'; position: absolute; left: 0; color: #ffb400; font-weight: bold; }
-
-        /* AJUSTES PARA FUNCIONAR NO CELULAR SEM MUDAR O DESIGN */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                padding: 15px;
-            }
-            .nav-links {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-                margin-top: 15px;
-            }
-            .nav-links li { margin: 5px; }
-            
-            /* Correção do Dropdown no Celular (Toque) */
-            .dropdown:hover .dropdown-content, 
-            .dropdown:active .dropdown-content {
-                display: block !important;
-                position: static; /* Faz o menu expandir para baixo em vez de flutuar */
-                background: #333;
-                width: 100%;
-            }
-            
-            .grid-servicos {
-                display: block !important; /* Empilha os cards no celular */
-            }
-            .card {
-                margin-bottom: 20px;
-                width: 100%;
-            }
-            .hero { padding: 40px 20px; }
-        }
-    </style>
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header>
         <nav class="navbar">
-            <div class="logo">KM PROJETOS & ENGENHARIA</div>
-            
-            <input type="checkbox" id="menu-check" style="display: none;">
-            <label for="menu-check" class="menu-btn"><i class="fas fa-bars"></i></label>
-            
+            <a href="../index.html" class="logo">KM PROJETOS & ENGENHARIA</a>
+            <input type="checkbox" id="menu-check">
+            <label for="menu-check" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
             <ul class="nav-links">
                 <li><a href="../index.html">INÍCIO</a></li>
+                
                 <li class="dropdown" onclick="void(0)">
-                    <a href="#">ENGENHARIA ▼</a>
+                    <a href="#" style="color: #ffb400;">ENGENHARIA ▼</a>
                     <ul class="dropdown-content">
                         <li><a href="civil.html">CIVIL</a></li>
                         <li><a href="ambiental.html">AMBIENTAL</a></li>
@@ -67,85 +28,69 @@
                         <li><a href="tecnologia.html">TECNOLOGIA</a></li>
                     </ul>
                 </li>
+                
                 <li><a href="../sobre.html">SOBRE NÓS</a></li>
                 <li><a href="../contato.html">CONTATO</a></li>
             </ul>
-
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Engenharia Civil</h1>
-            <p>Excelência técnica em Conceição do Araguaia - PA. Projetos civis, ambientais, segurança do trabalho e Tecnologia.</p>
-        </section>
+    <section class="hero">
+        <h1>Engenharia Ambiental</h1>
+        <p>Sustentabilidade e conformidade legal para o seu empreendimento.</p>
+    </section>
 
-        <section class="container">
-            <h2>Soluções Completas em Engenharia</h2>
-            <p style="margin-bottom: 40px;">Do planejamento à execução final, garantindo segurança e conformidade normativa.</p>
-            
-            <div class="grid-servicos">
+    <main class="container">
+        <div class="membro-card" style="max-width: 900px; margin: 0 auto;">
+            <div class="membro-info">
+                <h2>Soluções Ambientais Especializadas</h2>
+                <p>Consultoria técnica para garantir o cumprimento da legislação ambiental e a sustentabilidade do seu negócio.</p>
                 
-                <div class="card">
-                    <div class="icon">📐</div>
-                    <h3>Elaboração de Projetos</h3>
-                    <ul>
-                        <li><strong>Projetos Estruturais:</strong> Concreto, Metal, Alvenaria e Fundações.</li>
-                        <li><strong>Hidrossanitários:</strong> Redes de água e esgoto pluvial.</li>
-                        <li><strong>Elétricos (Baixa Tensão):</strong> Instalações prediais e residenciais.</li>
-                        <li><strong>Terraplenagem e Contenção:</strong> Muros de arrimo e geotecnia.</li>
-                        <li><strong>Infraestrutura Urbana:</strong> Pavimentação e saneamento.</li>
-                        <li><strong>Arquitetura:</strong> Projetos complementares residenciais e comerciais.</li>
-                    </ul>
+                <div style="text-align: left; margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <h3 style="color: #ffb400; margin-bottom: 10px;">📋 Licenciamento Ambiental</h3>
+                        <p>• Licença Prévia, Instalação e Operação</p>
+                        <p>• Dispensa de Licenciamento (DLA)</p>
+                        <p>• Regularização de Atividades</p>
+                        <p>• Renovação de Licenças</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #ffb400; margin-bottom: 10px;">💧 Recursos Hídricos</h3>
+                        <p>• Outorga de Uso de Água</p>
+                        <p>• Projetos de Captação e Drenagem</p>
+                        <p>• Tratamento de Efluentes</p>
+                        <p>• Poços Artesianos (Regularização)</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #ffb400; margin-bottom: 10px;">♻️ Gestão de Resíduos</h3>
+                        <p>• PGRS (Plano de Resíduos Sólidos)</p>
+                        <p>• PGRSS (Resíduos de Saúde)</p>
+                        <p>• Auditoria Ambiental</p>
+                        <p>• Educação Ambiental Corporativa</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #ffb400; margin-bottom: 10px;">🌳 Gestão de Terras</h3>
+                        <p>• CAR (Cadastro Ambiental Rural)</p>
+                        <p>• Inventário Florestal</p>
+                        <p>• Plano de Recuperação (PRAD)</p>
+                        <p>• Levantamento Planialtimétrico</p>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon">🏗️</div>
-                    <h3>Gestão e Execução</h3>
-                    <ul>
-                        <li><strong>Construção Civil:</strong> Execução residencial e industrial.</li>
-                        <li><strong>Gerenciamento e Fiscalização:</strong> Controle de custos e cronograma.</li>
-                        <li><strong>Orçamento de Obras:</strong> Levantamento e composição de preços.</li>
-                        <li><strong>Reforma e Retrofit:</strong> Modernização de estruturas.</li>
-                    </ul>
+                <div class="crea-box" style="margin-top: 40px; width: 100%;">
+                    Solicite uma análise técnica para a sua propriedade ou empresa.
                 </div>
-
-                <div class="card">
-                    <div class="icon">🔎</div>
-                    <h3>Laudos e Perícias</h3>
-                    <ul>
-                        <li><strong>Engenharia Diagnóstica:</strong> Correção de patologias e infiltrações.</li>
-                        <li><strong>Laudos Técnicos:</strong> Estabilidade e habitabilidade.</li>
-                        <li><strong>Vistorias de Vizinhança:</strong> Prevenção de litígios.</li>
-                        <li><strong>Pareceres Técnicos:</strong> Conformidade normativa.</li>
-                        <li><strong>Perícias Judiciais:</strong> Atuação como perito oficial.</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="icon">📄</div>
-                    <h3>Regularização Legal</h3>
-                    <ul>
-                        <li><strong>Regularização de Imóveis:</strong> Habite-se e Averbação em cartório.</li>
-                        <li><strong>Projetos As-Built:</strong> Registro do projeto "como construído".</li>
-                        <li><strong>Emissão de ART:</strong> Responsabilidade Técnica legalizada.</li>
-                        <li><strong>Legalização:</strong> Processos em Prefeituras e Receita Federal.</li>
-                    </ul>
-                </div>
-
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 KM Projetos & Engenharia - Todos os direitos reservados.</p>
-            <p>Contato: (94) 99250-0073 | <strong>kmprojetos.eng@gmail.com</strong></p>
-            <hr>
-            <p>Desenvolvido por: <a href="https://razgo.com.br" target="_blank">RAZGO</a></p>
-        </div>
+        <p>&copy; 2026 KM Projetos & Engenharia - Todos os direitos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/5594992500073" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/5594912345678" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 </body>
 </html>
