@@ -6,63 +6,24 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
     <link rel="shortcut icon" href="/favicon.png">
-    <title>KM PROJETOS & ENGENHARIA | Civil</title>
+    <title>Engenharia Civil | KM PROJETOS & ENGENHARIA</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Ajuste específico para esta página de serviços densos */
-        .card h3 { border-bottom: 2px solid #ffb400; display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
-        .card ul { list-style: none; text-align: left; padding: 0; }
-        .card ul li { margin-bottom: 8px; font-size: 0.9rem; position: relative; padding-left: 20px; }
-        .card ul li::before { content: '✔'; position: absolute; left: 0; color: #ffb400; font-weight: bold; }
-
-        /* AJUSTES PARA FUNCIONAR NO CELULAR SEM MUDAR O DESIGN */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                padding: 15px;
-            }
-            .nav-links {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-                margin-top: 15px;
-            }
-            .nav-links li { margin: 5px; }
-            
-            /* Correção do Dropdown no Celular (Toque) */
-            .dropdown:hover .dropdown-content, 
-            .dropdown:active .dropdown-content {
-                display: block !important;
-                position: static; /* Faz o menu expandir para baixo em vez de flutuar */
-                background: #333;
-                width: 100%;
-            }
-            
-            .grid-servicos {
-                display: block !important; /* Empilha os cards no celular */
-            }
-            .card {
-                margin-bottom: 20px;
-                width: 100%;
-            }
-            .hero { padding: 40px 20px; }
-        }
-    </style>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header>
         <nav class="navbar">
-            <div class="logo">KM PROJETOS & ENGENHARIA</div>
-            
-            <input type="checkbox" id="menu-check" style="display: none;">
-            <label for="menu-check" class="menu-btn"><i class="fas fa-bars"></i></label>
-            
+            <a href="../index.html" class="logo">KM PROJETOS & ENGENHARIA</a>
+            <input type="checkbox" id="menu-check">
+            <label for="menu-check" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
             <ul class="nav-links">
                 <li><a href="../index.html">INÍCIO</a></li>
                 <li class="dropdown" onclick="void(0)">
-                    <a href="#">ENGENHARIA ▼</a>
+                    <a href="#" style="color: #ffb400;">ENGENHARIA ▼</a>
                     <ul class="dropdown-content">
                         <li><a href="civil.html">CIVIL</a></li>
                         <li><a href="ambiental.html">AMBIENTAL</a></li>
@@ -73,71 +34,56 @@
                 <li><a href="../sobre.html">SOBRE NÓS</a></li>
                 <li><a href="../contato.html">CONTATO</a></li>
             </ul>
-
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Engenharia Civil</h1>
-            <p>Excelência técnica em Conceição do Araguaia - PA. Projetos civis, ambientais, segurança do trabalho e Tecnologia.</p>
-        </section>
+    <section class="hero">
+        <h1>Engenharia Civil</h1>
+        <p>Projetos estruturais, execução de obras e consultoria técnica especializada.</p>
+    </section>
 
-        <section class="container">
-            <h2>Soluções Completas em Engenharia</h2>
-            <p style="margin-bottom: 40px;">Do planejamento à execução final, garantindo segurança e conformidade normativa.</p>
-            
-            <div class="grid-servicos">
+    <main class="container">
+        <div class="membro-card" style="max-width: 900px; margin: 0 auto;">
+            <div class="membro-info">
+                <h2>Soluções Completas em Construção e Projetos</h2>
+                <p>Do planejamento à entrega final, garantindo segurança estrutural e economia para sua obra.</p>
                 
-                <div class="card">
-                    <div class="icon">📐</div>
-                    <h3>Elaboração de Projetos</h3>
-                    <ul>
-                        <li><strong>Projetos Estruturais:</strong> Concreto, Metal, Alvenaria e Fundações.</li>
-                        <li><strong>Hidrossanitários:</strong> Redes de água e esgoto pluvial.</li>
-                        <li><strong>Elétricos (Baixa Tensão):</strong> Instalações prediais e residenciais.</li>
-                        <li><strong>Terraplenagem e Contenção:</strong> Muros de arrimo e geotecnia.</li>
-                        <li><strong>Infraestrutura Urbana:</strong> Pavimentação e saneamento.</li>
-                        <li><strong>Arquitetura:</strong> Projetos complementares residenciais e comerciais.</li>
-                    </ul>
+                <div style="text-align: left; margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <h3 style="color: #ffb400; margin-bottom: 10px;">📐 Elaboração de Projetos</h3>
+                        <p>• Projetos Estruturais (Concreto e Aço)</p>
+                        <p>• Projetos Hidrossanitários</p>
+                        <p>• Projetos Elétricos Prediais</p>
+                        <p>• Plantas Arquitetônicas e Humanizadas</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #ffb400; margin-bottom: 10px;">🏗️ Execução e Gestão</h3>
+                        <p>• Construção Residencial e Comercial</p>
+                        <p>• Acompanhamento e Fiscalização de Obra</p>
+                        <p>• Orçamentos Detalhados (Composição de Custos)</p>
+                        <p>• Cronograma Físico-Financeiro</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #ffb400; margin-bottom: 10px;">🔎 Laudos e Perícias</h3>
+                        <p>• Laudo de Estabilidade Estrutural</p>
+                        <p>• Vistoria de Vizinhança (Cautelar)</p>
+                        <p>• Perícias Judiciais e Extrajudiciais</p>
+                        <p>• Avaliação de Imóveis Urbano/Rural</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #ffb400; margin-bottom: 10px;">🏠 Regularização</h3>
+                        <p>• Aprovação de Projetos na Prefeitura</p>
+                        <p>• Habite-se e Averbação</p>
+                        <p>• Desmembramento e Remembramento</p>
+                        <p>• Regularização de Obras Existentes</p>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon">🏗️</div>
-                    <h3>Gestão e Execução</h3>
-                    <ul>
-                        <li><strong>Construção Civil:</strong> Execução residencial e industrial.</li>
-                        <li><strong>Gerenciamento e Fiscalização:</strong> Controle de custos e cronograma.</li>
-                        <li><strong>Orçamento de Obras:</strong> Levantamento e composição de preços.</li>
-                        <li><strong>Reforma e Retrofit:</strong> Modernização de estruturas.</li>
-                    </ul>
+                <div class="crea-box" style="margin-top: 40px; width: 100%;">
+                    Engenharia de precisão para transformar seu sonho em realidade com segurança.
                 </div>
-
-                <div class="card">
-                    <div class="icon">🔎</div>
-                    <h3>Laudos e Perícias</h3>
-                    <ul>
-                        <li><strong>Engenharia Diagnóstica:</strong> Correção de patologias e infiltrações.</li>
-                        <li><strong>Laudos Técnicos:</strong> Estabilidade e habitabilidade.</li>
-                        <li><strong>Vistorias de Vizinhança:</strong> Prevenção de litígios.</li>
-                        <li><strong>Pareceres Técnicos:</strong> Conformidade normativa.</li>
-                        <li><strong>Perícias Judiciais:</strong> Atuação como perito oficial.</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="icon">📄</div>
-                    <h3>Regularização Legal</h3>
-                    <ul>
-                        <li><strong>Regularização de Imóveis:</strong> Habite-se e Averbação em cartório.</li>
-                        <li><strong>Projetos As-Built:</strong> Registro do projeto "como construído".</li>
-                        <li><strong>Emissão de ART:</strong> Responsabilidade Técnica legalizada.</li>
-                        <li><strong>Legalização:</strong> Processos em Prefeituras e Receita Federal.</li>
-                    </ul>
-                </div>
-
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
