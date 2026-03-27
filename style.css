@@ -249,3 +249,10 @@ footer {
     .contato-card { width: 100%; max-width: 100%; }
     .foto-container { width: 180px; height: 180px; }
 }
+
+/* ID para centralizar e enquadrar o rosto do Alexsandro */
+#alexsandro-foto {
+    object-fit: contain; /* Enquadra a foto inteira dentro do círculo, sem cortar */
+    object-position: center; /* Mantém o foco no centro da foto */
+    transform: scale(1.15); /* Aumenta levemente a imagem para preencher o círculo */
+}
