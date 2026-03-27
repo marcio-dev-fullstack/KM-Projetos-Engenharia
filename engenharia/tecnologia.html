@@ -3,168 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KM PROJETOS & ENGENHARIA | Computação</title>
+    <title>KM PROJETOS & ENGENHARIA | Civil</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Ajuste específico para listagem de serviços de Tecnologia */
+        /* Ajuste específico para esta página de serviços densos */
         .card h3 { border-bottom: 2px solid #ffb400; display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
         .card ul { list-style: none; text-align: left; padding: 0; }
         .card ul li { margin-bottom: 8px; font-size: 0.9rem; position: relative; padding-left: 20px; }
         .card ul li::before { content: '✔'; position: absolute; left: 0; color: #ffb400; font-weight: bold; }
+
+        /* AJUSTES PARA FUNCIONAR NO CELULAR SEM MUDAR O DESIGN */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 15px;
+            }
+            .nav-links li { margin: 5px; }
+            
+            /* Correção do Dropdown no Celular (Toque) */
+            .dropdown:hover .dropdown-content, 
+            .dropdown:active .dropdown-content {
+                display: block !important;
+                position: static; /* Faz o menu expandir para baixo em vez de flutuar */
+                background: #333;
+                width: 100%;
+            }
+            
+            .grid-servicos {
+                display: block !important; /* Empilha os cards no celular */
+            }
+            .card {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .hero { padding: 40px 20px; }
+        }
     </style>
 </head>
 <body>
-    <header><!DOCTYPE html>
-        <html lang="pt-br">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>KM PROJETOS & ENGENHARIA | Civil</title>
-            <link rel="stylesheet" href="../style.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-            <style>
-                /* Ajuste específico para esta página de serviços densos */
-                .card h3 { border-bottom: 2px solid #ffb400; display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
-                .card ul { list-style: none; text-align: left; padding: 0; }
-                .card ul li { margin-bottom: 8px; font-size: 0.9rem; position: relative; padding-left: 20px; }
-                .card ul li::before { content: '✔'; position: absolute; left: 0; color: #ffb400; font-weight: bold; }
-        
-                /* AJUSTES PARA FUNCIONAR NO CELULAR SEM MUDAR O DESIGN */
-                @media (max-width: 768px) {
-                    .navbar {
-                        flex-direction: column;
-                        padding: 15px;
-                    }
-                    .nav-links {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        gap: 10px;
-                        margin-top: 15px;
-                    }
-                    .nav-links li { margin: 5px; }
-                    
-                    /* Correção do Dropdown no Celular (Toque) */
-                    .dropdown:hover .dropdown-content, 
-                    .dropdown:active .dropdown-content {
-                        display: block !important;
-                        position: static; /* Faz o menu expandir para baixo em vez de flutuar */
-                        background: #333;
-                        width: 100%;
-                    }
-                    
-                    .grid-servicos {
-                        display: block !important; /* Empilha os cards no celular */
-                    }
-                    .card {
-                        margin-bottom: 20px;
-                        width: 100%;
-                    }
-                    .hero { padding: 40px 20px; }
-                }
-            </style>
-        </head>
-        <body>
-            <header>
-                <nav class="navbar">
-                    <div class="logo">KM PROJETOS & ENGENHARIA</div>
-                    
-                    <input type="checkbox" id="menu-check" style="display: none;">
-                    <label for="menu-check" class="menu-btn"><i class="fas fa-bars"></i></label>
-                    
-                    <ul class="nav-links">
-                        <li><a href="../index.html">INÍCIO</a></li>
-                        <li class="dropdown" onclick="void(0)">
-                            <a href="#">ENGENHARIA ▼</a>
-                                <ul class="dropdown-content">
-                                    <li><a href="civil.html">CIVIL</a></li>
-                                    <li><a href="ambiental.html">AMBIENTAL</a></li>
-                                    <li><a href="saude.html">SEGURANÇA</a></li>
-                                    <li><a href="tecnologia.html">TECNOLOGIA</a></li>
-                                </ul>
-                        </li>
-                        <li><a href="../sobre.html">SOBRE NÓS</a></li>
-                        <li><a href="../contato.html">CONTATO</a></li>
-                    </ul>
-                </nav>
-            </header>
-        
-            <main>
-                <section class="hero">
-                    <h1>Engenharia Civil</h1>
-                    <p>Excelência técnica em Conceição do Araguaia - PA. Projetos civis, ambientais, segurança do trabalho e Tecnologia.</p>
-                </section>
-        
-                <section class="container">
-                    <h2>Soluções Completas em Engenharia</h2>
-                    <p style="margin-bottom: 40px;">Do planejamento à execução final, garantindo segurança e conformidade normativa.</p>
-                    
-                    <div class="grid-servicos">
-                        
-                        <div class="card">
-                            <div class="icon">📐</div>
-                            <h3>Elaboração de Projetos</h3>
-                            <ul>
-                                <li><strong>Projetos Estruturais:</strong> Concreto, Metal, Alvenaria e Fundações.</li>
-                                <li><strong>Hidrossanitários:</strong> Redes de água e esgoto pluvial.</li>
-                                <li><strong>Elétricos (Baixa Tensão):</strong> Instalações prediais e residenciais.</li>
-                                <li><strong>Terraplenagem e Contenção:</strong> Muros de arrimo e geotecnia.</li>
-                                <li><strong>Infraestrutura Urbana:</strong> Pavimentação e saneamento.</li>
-                                <li><strong>Arquitetura:</strong> Projetos complementares residenciais e comerciais.</li>
-                            </ul>
-                        </div>
-        
-                        <div class="card">
-                            <div class="icon">🏗️</div>
-                            <h3>Gestão e Execução</h3>
-                            <ul>
-                                <li><strong>Construção Civil:</strong> Execução residencial e industrial.</li>
-                                <li><strong>Gerenciamento e Fiscalização:</strong> Controle de custos e cronograma.</li>
-                                <li><strong>Orçamento de Obras:</strong> Levantamento e composição de preços.</li>
-                                <li><strong>Reforma e Retrofit:</strong> Modernização de estruturas.</li>
-                            </ul>
-                        </div>
-        
-                        <div class="card">
-                            <div class="icon">🔎</div>
-                            <h3>Laudos e Perícias</h3>
-                            <ul>
-                                <li><strong>Engenharia Diagnóstica:</strong> Correção de patologias e infiltrações.</li>
-                                <li><strong>Laudos Técnicos:</strong> Estabilidade e habitabilidade.</li>
-                                <li><strong>Vistorias de Vizinhança:</strong> Prevenção de litígios.</li>
-                                <li><strong>Pareceres Técnicos:</strong> Conformidade normativa.</li>
-                                <li><strong>Perícias Judiciais:</strong> Atuação como perito oficial.</li>
-                            </ul>
-                        </div>
-        
-                        <div class="card">
-                            <div class="icon">📄</div>
-                            <h3>Regularização Legal</h3>
-                            <ul>
-                                <li><strong>Regularização de Imóveis:</strong> Habite-se e Averbação em cartório.</li>
-                                <li><strong>Projetos As-Built:</strong> Registro do projeto "como construído".</li>
-                                <li><strong>Emissão de ART:</strong> Responsabilidade Técnica legalizada.</li>
-                                <li><strong>Legalização:</strong> Processos em Prefeituras e Receita Federal.</li>
-                            </ul>
-                        </div>
-        
-                    </div>
-                </section>
-            </main>
-        
-            <footer>
-                <div class="footer-content">
-                    <p>&copy; 2026 KM Projetos & Engenharia - Todos os direitos reservados.</p>
-                    <p>Contato: (94) 99250-0073 | <strong>kmprojetos.eng@gmail.com</strong></p>
-                    <hr>
-                    <p>Desenvolvido por: <a href="https://razgo.com.br" target="_blank">RAZGO</a></p>
-                </div>
-            </footer>
-        
-            <a href="https://wa.me/5594992500073" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </body>
-        </html>
+    <header>
         <nav class="navbar">
             <div class="logo">KM PROJETOS & ENGENHARIA</div>
             
@@ -175,12 +60,12 @@
                 <li><a href="../index.html">INÍCIO</a></li>
                 <li class="dropdown" onclick="void(0)">
                     <a href="#">ENGENHARIA ▼</a>
-                    <ul class="dropdown-content">
-                        <li><a href="engenharia/civil.html">CIVIL</a></li>
-                        <li><a href="engenharia/ambiental.html">AMBIENTAL</a></li>
-                        <li><a href="engenharia/saude.html">Saúde e segurança</a></li>
-                        <li><a href="engenharia/ti.html">Tecnologia</a></li>
-                    </ul>
+                        <ul class="dropdown-content">
+                            <li><a href="civil.html">CIVIL</a></li>
+                            <li><a href="ambiental.html">AMBIENTAL</a></li>
+                            <li><a href="saude.html">SEGURANÇA</a></li>
+                            <li><a href="tecnologia.html">TECNOLOGIA</a></li>
+                        </ul>
                 </li>
                 <li><a href="../sobre.html">SOBRE NÓS</a></li>
                 <li><a href="../contato.html">CONTATO</a></li>
@@ -190,46 +75,60 @@
 
     <main>
         <section class="hero">
-            <h1>Engenharia de Computação</h1>
+            <h1>Engenharia Civil</h1>
             <p>Excelência técnica em Conceição do Araguaia - PA. Projetos civis, ambientais, segurança do trabalho e Tecnologia.</p>
         </section>
 
         <section class="container">
-            <h2>Tecnologia da Informação e Inovação</h2>
-            <p style="margin-bottom: 40px;">Soluções digitais inteligentes, automação e consultoria tecnológica de alto nível.</p>
+            <h2>Soluções Completas em Engenharia</h2>
+            <p style="margin-bottom: 40px;">Do planejamento à execução final, garantindo segurança e conformidade normativa.</p>
             
             <div class="grid-servicos">
                 
                 <div class="card">
-                    <div class="icon">💻</div>
-                    <h3>Sistemas Personalizados</h3>
+                    <div class="icon">📐</div>
+                    <h3>Elaboração de Projetos</h3>
                     <ul>
-                        <li><strong>Softwares sob medida:</strong> ERPs, CRMs e ferramentas de gestão.</li>
-                        <li><strong>Sistemas Web:</strong> Plataformas escaláveis com Node.js e Python.</li>
-                        <li><strong>MazzEscolar:</strong> Gestão educacional e acadêmica integrada.</li>
-                        <li><strong>Automação Comercial:</strong> Integração com APIs e faturamento.</li>
+                        <li><strong>Projetos Estruturais:</strong> Concreto, Metal, Alvenaria e Fundações.</li>
+                        <li><strong>Hidrossanitários:</strong> Redes de água e esgoto pluvial.</li>
+                        <li><strong>Elétricos (Baixa Tensão):</strong> Instalações prediais e residenciais.</li>
+                        <li><strong>Terraplenagem e Contenção:</strong> Muros de arrimo e geotecnia.</li>
+                        <li><strong>Infraestrutura Urbana:</strong> Pavimentação e saneamento.</li>
+                        <li><strong>Arquitetura:</strong> Projetos complementares residenciais e comerciais.</li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <div class="icon">🌐</div>
-                    <h3>Web3 e Blockchain</h3>
+                    <div class="icon">🏗️</div>
+                    <h3>Gestão e Execução</h3>
                     <ul>
-                        <li><strong>Contratos Inteligentes:</strong> Desenvolvimento de Smart Contracts seguros.</li>
-                        <li><strong>DApps:</strong> Aplicativos descentralizados para diversos setores.</li>
-                        <li><strong>Consultoria Web3:</strong> Transição tecnológica para a nova web.</li>
-                        <li><strong>Tokenização:</strong> Ativos digitais e integração com blockchain.</li>
+                        <li><strong>Construção Civil:</strong> Execução residencial e industrial.</li>
+                        <li><strong>Gerenciamento e Fiscalização:</strong> Controle de custos e cronograma.</li>
+                        <li><strong>Orçamento de Obras:</strong> Levantamento e composição de preços.</li>
+                        <li><strong>Reforma e Retrofit:</strong> Modernização de estruturas.</li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <div class="icon">⚙️</div>
-                    <h3>Infraestrutura e Integrações</h3>
+                    <div class="icon">🔎</div>
+                    <h3>Laudos e Perícias</h3>
                     <ul>
-                        <li><strong>Integração de APIs:</strong> Conexão com SEFAZ, bancos e serviços externos.</li>
-                        <li><strong>Engenharia de Dados:</strong> Otimização de bancos de dados e fluxos de informação.</li>
-                        <li><strong>Segurança Digital:</strong> Consultoria em proteção de dados e sistemas.</li>
-                        <li><strong>Suporte Técnico:</strong> Consultoria especializada em infraestrutura de TI.</li>
+                        <li><strong>Engenharia Diagnóstica:</strong> Correção de patologias e infiltrações.</li>
+                        <li><strong>Laudos Técnicos:</strong> Estabilidade e habitabilidade.</li>
+                        <li><strong>Vistorias de Vizinhança:</strong> Prevenção de litígios.</li>
+                        <li><strong>Pareceres Técnicos:</strong> Conformidade normativa.</li>
+                        <li><strong>Perícias Judiciais:</strong> Atuação como perito oficial.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="icon">📄</div>
+                    <h3>Regularização Legal</h3>
+                    <ul>
+                        <li><strong>Regularização de Imóveis:</strong> Habite-se e Averbação em cartório.</li>
+                        <li><strong>Projetos As-Built:</strong> Registro do projeto "como construído".</li>
+                        <li><strong>Emissão de ART:</strong> Responsabilidade Técnica legalizada.</li>
+                        <li><strong>Legalização:</strong> Processos em Prefeituras e Receita Federal.</li>
                     </ul>
                 </div>
 
@@ -246,8 +145,6 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/5594992500073" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <a href="https://wa.me/5594992500073" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
